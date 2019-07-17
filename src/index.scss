@@ -1,0 +1,116 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+
+$charcoal: #333;
+$numbers-color: #194378;
+$specials-color: #225c9e;
+$operators-color: #237192;
+$display-color: #323235;
+
+.container {
+  background: #a81e37;
+  border-radius: 20px;
+  width: 30%;
+  padding: 30px;
+
+  .logo {
+    margin: 15px;
+  }
+
+  .App {
+
+    .display {
+      border-radius: 50px;
+      width: 95%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      background: $display-color;
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      justify-content: flex-end;
+
+      p {
+        font-size: 2rem;
+
+      }
+
+    }
+
+    .commands {
+      display: flex;
+      justify-content: flex-start;
+
+      .commands-vert {
+        display: flex;
+        flex-direction: column;
+
+        .numbers {
+          display: flex;
+          flex-wrap: wrap;
+
+          button {
+            background: $numbers-color;
+
+            &.grow {
+              width: 63.5%;
+            }
+          }
+
+
+        }
+
+        .specials {
+
+          button {
+            background: $specials-color;
+          }
+
+        }
+
+      }
+
+      .operators {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+        button {
+          background: $operators-color;
+          width: 100%;
+        }
+
+      }
+
+    }
+
+    * button {
+      border-radius: 50px;
+      width: 30%;
+      height: 100px;
+      font-size: 2rem;
+      margin: 6px;
+      box-shadow: 0 5px $charcoal;
+      border: 0;
+      color: white;
+
+      .grow {
+        width: 60%;
+
+      }
+
+    }
+  }
+
+}

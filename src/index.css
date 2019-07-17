@@ -1,12 +1,76 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+.container {
+  background: #a81e37;
+  border-radius: 20px;
+  width: 30%;
+  padding: 30px; }
+
+.container .logo {
+  margin: 15px; }
+
+.container .App .display {
+  border-radius: 50px;
+  width: 95%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: #323235;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  justify-content: flex-end; }
+
+.container .App .display p {
+  font-size: 2rem; }
+
+.container .App .commands {
+  display: flex;
+  justify-content: flex-start; }
+
+.container .App .commands .commands-vert {
+  display: flex;
+  flex-direction: column; }
+
+.container .App .commands .commands-vert .numbers {
+  display: flex;
+  flex-wrap: wrap; }
+
+.container .App .commands .commands-vert .numbers button {
+  background: #194378; }
+
+.container .App .commands .commands-vert .numbers button.grow {
+  width: 63.5%; }
+
+.container .App .commands .commands-vert .specials button {
+  background: #225c9e; }
+
+.container .App .commands .operators {
+  display: flex;
+  flex-direction: column;
+  width: 30%; }
+
+.container .App .commands .operators button {
+  background: #237192;
+  width: 100%; }
+
+.container .App * button {
+  border-radius: 50px;
+  width: 30%;
+  height: 100px;
+  font-size: 2rem;
+  margin: 6px;
+  box-shadow: 0 5px #333;
+  border: 0;
+  color: white; }
+
+.container .App * button .grow {
+  width: 60%; }
+
+/*# sourceMappingURL=index.css.map */
