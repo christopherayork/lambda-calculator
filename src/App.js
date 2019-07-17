@@ -9,6 +9,9 @@ import Display from './components/DisplayComponents/Display.js';
 
 // Logo has already been provided for you. Do the same for the remaining components
 import Logo from "./components/DisplayComponents/Logo";
+import {operators} from './data.js';
+import {numbers} from './data.js';
+import {specials} from './data.js';
 
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
@@ -18,6 +21,9 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
   let [display, setDisplay] = useState(0);
+  let [operatorState, setOperator] = useState(operators);
+  let [numberState, setNumber] = useState(numbers);
+  let [specialState, setSpecial] = useState(specials);
 
   return (
     <div className="container">
@@ -27,10 +33,10 @@ function App() {
         <Display display={display} setDisplay={setDisplay} />
         <div className={'commands'}>
           <div className={'commands-vert'}>
-            <Specials/>
-            <Numbers/>
+            <Specials specialState={specialState} setSpecial={setSpecial} />
+            <Numbers numberState={numberState} setNumber={setNumber} />
           </div>
-          <Operators/>
+          <Operators operatorState={operatorState} setOperator={setOperator} />
         </div>
 
       </div>

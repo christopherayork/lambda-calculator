@@ -1,10 +1,11 @@
 import React from "react";
 
 const Display = (props) => {
+  let {display, setDisplay} = props;
   return (
     <div className={'display'}>
       {/* Display any props data here */}
-      <p>{props.display}</p>
+      <p>{display}</p>
     </div>
   )
 };
